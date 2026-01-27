@@ -11,36 +11,44 @@
 
     <header class="header">
         <h1>Project HTML Web</h1>
-        <p>Website tugas milik Demian</p>
+        <p>Website tugas milik</p>
     </header>
 
     <nav class="menu">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">PHP</a></li>
-            <li><a href="#">JavaScript</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="#" onclick="showContent('home')">Home</a></li>
+        <li><a href="#" onclick="showContent('html')">HTML</a></li>
+        <li><a href="#" onclick="showContent('css')">CSS</a></li>
+        <li><a href="#" onclick="showContent('php')">PHP</a></li>
+        <li><a href="#" onclick="showContent('js')">JavaScript</a></li>
+    </ul>
+</nav>
+
 
     <div class="badan">
-        <aside class="sidebar">
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="#">HTML Dasar</a></li>
-                <li><a href="#">CSS Dasar</a></li>
-                <li><a href="#">PHP Dasar</a></li>
-                <li><a href="#">JavaScript Dasar</a></li>
-            </ul>
-        </aside>
+    <aside class="sidebar">
+        <h3>Menu Materi</h3>
+        <ul>
+            <li><a href="#" onclick="showContent('html')">HTML Dasar</a></li>
+            <li><a href="#" onclick="showContent('css')">CSS Dasar</a></li>
+            <li><a href="#" onclick="showContent('php')">PHP Dasar</a></li>
+            <li><a href="#" onclick="showContent('js')">JavaScript Dasar</a></li>
+        </ul>
+    </aside>
 
-        <main class="content">
-            <h2>Selamat Datang</h2>
-            <p>
-                Ini adalah halaman utama project web saya.
-                Website ini dibuat tanggal 27 Januari 2026.
-            </p>
+    <main class="content" id="content">
+        <h2>Selamat Datang</h2>
+        <p>
+            Ini adalah halaman utama project web sederhana.
+<br>
+Gunakan menu di atas atau di samping untuk membuka materi HTML, CSS, PHP, dan JavaScript.
+        </p>
+    </main>
+</div>
+
+
+
+
         </main>
     </div>
 
@@ -50,6 +58,139 @@
 
 </div>
 
+<script>
+function showContent(materi) {
+    let content = document.getElementById("content");
+
+    if (materi === "home") {
+        content.innerHTML = `
+        <h2>Selamat Datang</h2>
+        <p>
+        Ini adalah halaman utama project web sederhana.
+        </p>
+        <p>
+        Gunakan menu di atas atau di samping untuk membuka materi HTML, CSS,
+        PHP, dan JavaScript.
+        </p>
+        `;
+    }
+
+    else if (materi === "html") {
+        content.innerHTML = `
+        <h2>HTML Dasar</h2>
+        <p>
+        HTML (HyperText Markup Language) adalah bahasa markup yang digunakan
+        untuk membuat struktur dasar halaman website.
+        </p>
+
+        <h3>Contoh Kode HTML Lengkap:</h3>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Contoh HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Halo Dunia&lt;/h1&gt;
+    &lt;p&gt;Ini adalah contoh halaman HTML sederhana.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+        `;
+    }
+
+    else if (materi === "css") {
+        content.innerHTML = `
+        <h2>CSS Dasar</h2>
+        <p>
+        CSS digunakan untuk mengatur tampilan halaman website agar terlihat
+        lebih menarik dan rapi.
+        </p>
+
+        <h3>Contoh Kode CSS Lengkap:</h3>
+        <pre><code>
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+}
+        </code></pre>
+        `;
+    }
+
+    else if (materi === "php") {
+        content.innerHTML = `
+        <h2>PHP Dasar</h2>
+        <p>
+        PHP adalah bahasa pemrograman server-side yang digunakan
+        untuk memproses data dan membuat website dinamis.
+        </p>
+
+        <h3>Contoh Kode PHP Lengkap:</h3>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Contoh PHP&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;?php
+    $nama = "Demian";
+    echo "Halo, nama saya " . $nama;
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+        `;
+    }
+
+    else if (materi === "js") {
+        content.innerHTML = `
+        <h2>JavaScript Dasar</h2>
+        <p>
+        JavaScript digunakan untuk membuat halaman website menjadi interaktif.
+        </p>
+
+        <h3>Contoh Kode JavaScript Lengkap:</h3>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Contoh JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;button onclick="tampilPesan()"&gt;Klik Saya&lt;/button&gt;
+
+&lt;script&gt;
+function tampilPesan() {
+    alert("Halo, ini contoh JavaScript");
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+        `;
+    }
+}
+</script>
+
+
 </body>
 </html>
-

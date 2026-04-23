@@ -1,43 +1,88 @@
-/* Reset */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Background lofi */
+/* BACKGROUND LOFI */
 body {
   font-family: "Press Start 2P", monospace;
   min-height: 100vh;
-  background: linear-gradient(180deg, #1e1f2b, #0f111a);
+  background: linear-gradient(#0d0f1a, #1a1d2e);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #d6d6ff;
+  color: #dcdcff;
+  overflow: hidden;
 }
 
-/* Container pixel card */
+/* 🌧️ RAIN PIXEL */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px);
+  background-size: 2px 10px;
+  animation: rain 0.5s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes rain {
+  from { transform: translateY(-10px); }
+  to { transform: translateY(10px); }
+}
+
+/* ✨ AMBIENT GLOW */
+body::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #6c7bff55, transparent 70%);
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(40px);
+}
+
+/* CONTAINER */
 .container {
   width: 420px;
   background: #2a2d3a;
   padding: 24px;
   border: 4px solid #3f4254;
-  border-radius: 0; /* pixel = kotak */
-  box-shadow: 
-    6px 6px 0px #1a1c25,
-    0 0 20px rgba(150, 150, 255, 0.08);
+  box-shadow: 6px 6px 0 #1a1c25;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
 }
 
-/* Judul */
+/* 🎮 FLOATING EFFECT */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* 🪟 WINDOW FRAME */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #ffffff10;
+  pointer-events: none;
+}
+
+/* TITLE */
 h1 {
   text-align: center;
   margin-bottom: 18px;
-  font-size: 14px;
+  font-size: 12px;
   color: #aab3ff;
-  letter-spacing: 1px;
 }
 
-/* Profile */
+/* PROFILE */
 .profile {
   background: #232532;
   padding: 12px;
@@ -45,10 +90,9 @@ h1 {
   margin-bottom: 18px;
   font-size: 10px;
   line-height: 1.6;
-  color: #cfd3ff;
 }
 
-/* Tombol pixel */
+/* BUTTON */
 .task-list button {
   width: 100%;
   padding: 10px;
@@ -59,23 +103,21 @@ h1 {
   font-size: 10px;
   font-family: inherit;
   cursor: pointer;
-  text-transform: uppercase;
-  transition: all 0.1s ease;
-  box-shadow: 4px 4px 0px #1b1d28;
+  box-shadow: 4px 4px 0 #1b1d28;
+  transition: all 0.15s ease;
 }
 
-/* Hover = glow lembut */
+/* HOVER */
 .task-list button:hover {
   background: #3a3e55;
-  color: #ffffff;
   box-shadow: 
-    2px 2px 0px #1b1d28,
-    0 0 10px rgba(180, 180, 255, 0.2);
-  transform: translate(2px, 2px);
+    2px 2px 0 #1b1d28,
+    0 0 12px rgba(150,150,255,0.3);
+  transform: translate(2px,2px);
 }
 
-/* Klik */
+/* CLICK */
 .task-list button:active {
+  transform: translate(4px,4px);
   box-shadow: none;
-  transform: translate(4px, 4px);
 }

@@ -1,146 +1,141 @@
-diff --git a/C:\Users\DOA\Documents\Codex\2026-04-30\buatlah-sebuah-code-yang-cocok-untuk\index.html b/C:\Users\DOA\Documents\Codex\2026-04-30\buatlah-sebuah-code-yang-cocok-untuk\index.html
-new file mode 100644
---- /dev/null
-+++ b/C:\Users\DOA\Documents\Codex\2026-04-30\buatlah-sebuah-code-yang-cocok-untuk\index.html
-@@ -0,0 +1,141 @@
-+<!DOCTYPE html>
-+<html lang="id">
-+<head>
-+  <meta charset="UTF-8">
-+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+  <title>Kumpulan Tugas</title>
-+  <link rel="stylesheet" href="style.css">
-+</head>
-+<body>
-+  <main class="container">
-+    <section class="hero">
-+      <div class="hero-text">
-+        <span class="badge">Student Assignment Hub</span>
-+        <h1>Kumpulan Tugas</h1>
-+        <p>Semua hasil tugas, LKPD, project web, dan portofolio tersusun dalam satu halaman yang rapi dan mudah dibuka.</p>
-+      </div>
-+
-+      <div class="hero-card">
-+        <div class="avatar">D</div>
-+        <div>
-+          <p class="small-label">Portofolio</p>
-+          <a href="https://demiandunov.github.io/Portofolio/" target="_blank" rel="noopener">Buka Portofolio</a>
-+        </div>
-+      </div>
-+    </section>
-+
-+    <section class="profile">
-+      <div class="profile-item">
-+        <span>Nama</span>
-+        <strong>Demian Dunov Bahri Al Rizky</strong>
-+      </div>
-+      <div class="profile-item">
-+        <span>Kelas</span>
-+        <strong>X - RPL 2</strong>
-+      </div>
-+      <div class="profile-item">
-+        <span>Absen</span>
-+        <strong>10</strong>
-+      </div>
-+      <div class="profile-item">
-+        <span>Kemampuan Bidang</span>
-+        <strong>Full Stack Developer</strong>
-+      </div>
-+    </section>
-+
-+    <section class="task-section">
-+      <div class="section-heading">
-+        <div>
-+          <span class="small-label">Assignment List</span>
-+          <h2>Daftar Tugas</h2>
-+        </div>
-+        <p>Tekan tombol untuk membuka halaman tugas atau mengunduh file.</p>
-+      </div>
-+
-+      <div class="task-list">
-+        <button onclick="openTask('tugas1.html')">
-+          <span class="task-number">01</span>
-+          <span>
-+            <strong>Tugas 1</strong>
-+            <small>Form Pemesanan</small>
-+          </span>
-+        </button>
-+
-+        <button onclick="openTask('tugas2.html')">
-+          <span class="task-number">02</span>
-+          <span>
-+            <strong>Tugas 2</strong>
-+            <small>Tabel &amp; Puisi</small>
-+          </span>
-+        </button>
-+
-+        <button onclick="openTask('tugas3.html')">
-+          <span class="task-number">03</span>
-+          <span>
-+            <strong>Tugas 3</strong>
-+            <small>Pantun 4 bait dan CSS</small>
-+          </span>
-+        </button>
-+
-+        <button onclick="openTask('projectweb1/index.html')">
-+          <span class="task-number">04</span>
-+          <span>
-+            <strong>Tugas 4</strong>
-+            <small>Project Web 1</small>
-+          </span>
-+        </button>
-+
-+        <button onclick="openTask('tugas_portofolio/index.html')">
-+          <span class="task-number">05</span>
-+          <span>
-+            <strong>Tugas 5</strong>
-+            <small>Website Portofolio</small>
-+          </span>
-+        </button>
-+
-+        <button onclick="downloadFile('LKPD Praktik Basis Data MySQL.docx')">
-+          <span class="task-number">06</span>
-+          <span>
-+            <strong>Tugas 6</strong>
-+            <small>LKPD Praktik Basis Data MySQL</small>
-+          </span>
-+        </button>
-+
-+        <button onclick="downloadFile('LKPD Array Asosiatif (Python & PHP).zip')">
-+          <span class="task-number">07</span>
-+          <span>
-+            <strong>Tugas 7</strong>
-+            <small>LKPD Array Asosiatif Python &amp; PHP</small>
-+          </span>
-+        </button>
-+
-+        <button onclick="downloadFile('LKPD PRAKTIK Pengelolaan Database MySQL via phpMyAdmin.zip')">
-+          <span class="task-number">08</span>
-+          <span>
-+            <strong>Tugas 8</strong>
-+            <small>LKPD Database MySQL via phpMyAdmin</small>
-+          </span>
-+        </button>
-+
-+        <button onclick="downloadFile('ENKAPSULASI.zip')">
-+          <span class="task-number">09</span>
-+          <span>
-+            <strong>Tugas 9</strong>
-+            <small>LKPD Enkapsulasi</small>
-+          </span>
-+        </button>
-+
-+        <button onclick="downloadFile('LKPD_INHERINTACE.zip')">
-+          <span class="task-number">10</span>
-+          <span>
-+            <strong>Tugas 10</strong>
-+            <small>LKPD Inheritance</small>
-+          </span>
-+        </button>
-+      </div>
-+    </section>
-+  </main>
-+
-+  <script src="script.js"></script>
-+</body>
-+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kumpulan Tugas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <span class="badge">Student Assignment Hub</span>
+        <h1>Kumpulan Tugas</h1>
+        <p>Semua hasil tugas, LKPD, project web, dan portofolio tersusun dalam satu halaman yang rapi dan mudah dibuka.</p>
+      </div>
+
+      <div class="hero-card">
+        <div class="avatar">D</div>
+        <div>
+          <p class="small-label">Portofolio</p>
+          <a href="https://demiandunov.github.io/Portofolio/" target="_blank" rel="noopener">Buka Portofolio</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile">
+      <div class="profile-item">
+        <span>Nama</span>
+        <strong>Demian Dunov Bahri Al Rizky</strong>
+      </div>
+      <div class="profile-item">
+        <span>Kelas</span>
+        <strong>X - RPL 2</strong>
+      </div>
+      <div class="profile-item">
+        <span>Absen</span>
+        <strong>10</strong>
+      </div>
+      <div class="profile-item">
+        <span>Kemampuan Bidang</span>
+        <strong>Full Stack Developer</strong>
+      </div>
+    </section>
+
+    <section class="task-section">
+      <div class="section-heading">
+        <div>
+          <span class="small-label">Assignment List</span>
+          <h2>Daftar Tugas</h2>
+        </div>
+        <p>Tekan tombol untuk membuka halaman tugas atau mengunduh file.</p>
+      </div>
+
+      <div class="task-list">
+        <button onclick="openTask('tugas1.html')">
+          <span class="task-number">01</span>
+          <span>
+            <strong>Tugas 1</strong>
+            <small>Form Pemesanan</small>
+          </span>
+        </button>
+
+        <button onclick="openTask('tugas2.html')">
+          <span class="task-number">02</span>
+          <span>
+            <strong>Tugas 2</strong>
+            <small>Tabel &amp; Puisi</small>
+          </span>
+        </button>
+
+        <button onclick="openTask('tugas3.html')">
+          <span class="task-number">03</span>
+          <span>
+            <strong>Tugas 3</strong>
+            <small>Pantun 4 bait dan CSS</small>
+          </span>
+        </button>
+
+        <button onclick="openTask('projectweb1/index.html')">
+          <span class="task-number">04</span>
+          <span>
+            <strong>Tugas 4</strong>
+            <small>Project Web 1</small>
+          </span>
+        </button>
+
+        <button onclick="openTask('tugas_portofolio/index.html')">
+          <span class="task-number">05</span>
+          <span>
+            <strong>Tugas 5</strong>
+            <small>Website Portofolio</small>
+          </span>
+        </button>
+
+        <button onclick="downloadFile('LKPD Praktik Basis Data MySQL.docx')">
+          <span class="task-number">06</span>
+          <span>
+            <strong>Tugas 6</strong>
+            <small>LKPD Praktik Basis Data MySQL</small>
+          </span>
+        </button>
+
+        <button onclick="downloadFile('LKPD Array Asosiatif (Python & PHP).zip')">
+          <span class="task-number">07</span>
+          <span>
+            <strong>Tugas 7</strong>
+            <small>LKPD Array Asosiatif Python &amp; PHP</small>
+          </span>
+        </button>
+
+        <button onclick="downloadFile('LKPD PRAKTIK Pengelolaan Database MySQL via phpMyAdmin.zip')">
+          <span class="task-number">08</span>
+          <span>
+            <strong>Tugas 8</strong>
+            <small>LKPD Database MySQL via phpMyAdmin</small>
+          </span>
+        </button>
+
+        <button onclick="downloadFile('ENKAPSULASI.zip')">
+          <span class="task-number">09</span>
+          <span>
+            <strong>Tugas 9</strong>
+            <small>LKPD Enkapsulasi</small>
+          </span>
+        </button>
+
+        <button onclick="downloadFile('LKPD_INHERINTACE.zip')">
+          <span class="task-number">10</span>
+          <span>
+            <strong>Tugas 10</strong>
+            <small>LKPD Inheritance</small>
+          </span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

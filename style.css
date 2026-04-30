@@ -1,34 +1,81 @@
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-:root {
-  --dark: #111827;
-  --text: #263241;
-  --muted: #64748b;
-  --cyan: #06b6d4;
-  --green: #22c55e;
-  --yellow: #facc15;
-  --white: #ffffff;
-  --line: rgba(15, 23, 42, 0.1);
-}
-
+/* BODY (FIX SCROLL + MODERN) */
 body {
+  font-family: 'Inter', system-ui, sans-serif;
   min-height: 100vh;
-  font-family: "Segoe UI", Arial, sans-serif;
-  color: var(--text);
-  background:
-    radial-gradient(circle at top left, rgba(34, 197, 94, 0.28), transparent 32%),
-    radial-gradient(circle at top right, rgba(6, 182, 212, 0.28), transparent 34%),
-    linear-gradient(135deg, #f8fafc, #e0f2fe 48%, #f0fdf4);
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e5e7eb;
+
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+
+  overflow-y: auto;
 }
 
+/* CONTAINER */
 .container {
-  width: min(1120px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 42px 0;
+  width: 100%;
+  max-width: 480px;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* sisanya tetap sama persis (udah bersih tanpa +) */
+/* TITLE */
+h1 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* SUBTITLE */
+h3 {
+  margin: 16px 0 8px;
+  font-size: 14px;
+}
+
+/* PROFILE */
+.profile {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* BUTTON */
+.task-list button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* HOVER */
+.task-list button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* CLICK */
+.task-list button:active {
+  transform: scale(0.98);
+}

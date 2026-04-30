@@ -1,12 +1,1 @@
-function openTask(filePath) {
-  window.open(filePath, "_blank");
-}
-
-function downloadFile(fileName) {
-  const link = document.createElement("a");
-  link.href = fileName;
-  link.download = fileName.split("/").pop();
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
+function openTask(page) { window.location.href = page; } function openTask(file) { window.location.href = file; } function downloadFile(file) { const a = document.createElement("a"); a.href = file; a.download = ""; document.body.appendChild(a); a.click(); document.body.removeChild(a); }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLYMORPHSIM PRAKTIKUM</title>
+</head>
+<body>
+    <script>
+        class Produk {
+            constructor(merek, stok) {
+                this.merek = merek;
+                this.stok = stok;
+            }
+            cekStok() {
+                return `Stok saat ini: ${this.stok}`;
+            }
+        }
+        class Televisi extends Produk {
+            constructor(merek, stok, jenis) {
+                super(merek, stok);
+                this.jenis = jenis;
+            }
+            cekStokTelevisi() {
+                return `Jenis: ${this.jenis}, ${super.cekStok()}` + "<br>";
+            }
+        }
+        let produk01 = new Televisi("Sony", 25, "Smart TV");
+        document.write(produk01.cekStokTelevisi());
+
+        //2
+        class Kendaraan {
+            constructor(merk, tahunProduksi) {
+                this.merk = merk;
+                this.tahunProduksi = tahunProduksi;
+            }
+            infoKendaraan() {
+                return `Merk: ${this.merk}, Tahun Produksi: ${this.tahunProduksi}`;
+            }
+        }
+        class Mobil extends Kendaraan {
+            constructor(merk, tahunProduksi, jenis) {
+                super(merk, tahunProduksi);
+                this.jenis = jenis;
+            }
+            infoMobil() {
+                return `Jenis: ${this.jenis}, ${super.infoKendaraan()}` + "<br>";
+            }
+        }
+        let mobil1 = new Mobil("Nissan", 2021, "Hatchback");
+        document.write(mobil1.infoMobil());
+
+        //3
+        class Hewan {
+            constructor(nama, jenis) {
+                this.nama = nama;
+                this.jenis = jenis;
+            }
+            infoHewan() {
+                return `Nama: ${this.nama}, Jenis: ${this.jenis}`;
+            }
+        }
+        class Anjing extends Hewan {
+            constructor(nama, jenis, warnaBulu) {
+                super(nama, jenis);
+                this.warnaBulu = warnaBulu;
+            }
+            infoAnjing() {
+                return `Warna Bulu: ${this.warnaBulu}, ${super.infoHewan()}`;
+            }
+        }
+        let anjing1 = new Anjing("Buddy", "Golden Retriever", "Kuning");
+        document.write(anjing1.infoAnjing());
+    </script>
+</body>
+</html>
